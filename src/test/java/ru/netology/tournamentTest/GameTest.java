@@ -80,4 +80,15 @@ public class GameTest {
         Assertions.assertThrows(NotRegisteredException.class, () ->
                 game.round("Scorpion", null));
     }
+
+    @Test
+
+    public void roundSixOnePlayerRegister() {
+
+        game.register(player2);
+
+
+        Assertions.assertThrows(NotRegisteredException.class, () ->
+                game.round("Scorpion", "Shao-kahn"));
+    }
 }
